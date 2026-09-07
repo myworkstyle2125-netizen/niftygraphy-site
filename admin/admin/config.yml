@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main # ඔයාගේ main branch එක (master නම් master ලෙස වෙනස් කරන්න)
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Posts / Categories"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
